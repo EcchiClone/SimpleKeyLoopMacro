@@ -53,7 +53,7 @@ class Application(tk.Frame):
 
 window = tk.Tk()
 
-window.title("Item Translator")
+window.title("Simple Key Press Loop")
 window.geometry("300x50+1200+200")
 window.resizable(True,True)
 window.call('wm', 'attributes', '.', '-topmost', '1')
@@ -92,7 +92,7 @@ class myLoop():
                 time.sleep(0.02)
                 keyboard.release(self.skillKeys[0]+', '+self.skillKeys[1]+', '+self.skillKeys[2])
             if i+1 < max:
-                for _ in range(int(self.delay*10.0)):
+                for _ in range(max(1,int(self.delay*10.0))):
                     time.sleep(0.1)
                     if Trigger:
                         app.log.set("STOP")
