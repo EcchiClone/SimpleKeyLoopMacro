@@ -92,7 +92,8 @@ class myLoop():
                 time.sleep(0.02)
                 keyboard.release(self.skillKeys[0]+', '+self.skillKeys[1]+', '+self.skillKeys[2])
             if i+1 < max:
-                for _ in range(max(1,int(self.delay*10.0))):
+                if(self.delay<0.11): self.delay = 0.11
+                for _ in range(int(self.delay*10.0)):
                     time.sleep(0.1)
                     if Trigger:
                         app.log.set("STOP")

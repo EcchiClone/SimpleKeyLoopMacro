@@ -1,4 +1,2 @@
 complete_5.mp3
-2.5,*,shift+*,shift+r
-3,ctrl+*,shift+*,f
-3,alt+*,shift+*,ctrl+shift+b
+9,*,shift+*,alt+2
